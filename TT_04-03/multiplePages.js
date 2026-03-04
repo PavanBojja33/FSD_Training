@@ -5,6 +5,7 @@ const server = http.createServer((req,res) => {
     res.setHeader('Content-Type', 'text/html');
     if(req.url === '/home' || req.url === '/'){
         res.write("<h1 style='color:blue;font-weight:bold;'>Welcome to Home Page</h1>");
+        res.write("<h1> Nodemon Demo </h1>");
     }
     else if(req.url === '/login'){
         res.write("<h1 style='color:green;font-weight:bold;'>Welcome to Login Page</h1>");
