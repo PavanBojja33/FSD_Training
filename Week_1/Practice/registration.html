@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<style>
+    *{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color:rgb(255, 255, 255);
+    }
+
+    .content{
+        border:2px solid rgb(83,83,83);
+        border-radius:10px;
+        padding:25px;
+        width:90%;
+        max-width:350px;
+        background:white;
+    }
+
+    h2{
+        text-align:center;
+        text-decoration: underline;
+        margin-bottom:20px;
+    }
+
+    form{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    label{
+        font-size:20px;
+        font-weight: 600;
+    }
+
+    input{
+        padding:8px;
+        border-radius:5px;
+        border:1px solid gray;
+        font-size:18px;
+    }
+
+    button{
+        margin-top:10px;
+        padding:10px;
+        border:none;
+        background:#007BFF;
+        color:white;
+        border-radius:5px;
+        cursor:pointer;
+        font-size:21px;
+    }
+
+    button:hover{
+        background:#63adfc;
+    }
+</style>
+<body>
+     <div class="content">
+
+        <h2>Registration Form</h2>
+
+        <form id="registration">
+
+            <label for="username">FullName</label>
+            <input type="text" id="fullname" placeholder="Enter fullname" required>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" required>
+            
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+            
+            <label for="password">Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Enter password again" required>
+
+
+            <button type="submit">Register</button>
+
+
+        </form>
+
+    </div>
+
+</body>
+<script>
+    const form=document.getElementById("registration");
+
+    form.addEventListener("submit" , (e) => {
+        e.preventDefault();
+
+        const fullname=document.getElementById("fullname").value.trim();
+        const username=document.getElementById("username").value.trim();
+        const email=document.getElementById("email").value.trim();
+        const password=document.getElementById("password").value.trim();
+        const confirmpassword=document.getElementById("confirmpassword").value.trim();
+
+        if(fullname === ""){
+            alert("Fullname required")
+            return
+        }
+
+        if(username.length < )
+    })
+</script>
+</html>

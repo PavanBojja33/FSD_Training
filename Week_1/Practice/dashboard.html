@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        .dashboard{
+            display:flex;
+            height:100vh;
+        }
+
+        .sidebar{
+            width:220px;
+            background:#91c4f7;
+            color:rgb(0, 0, 0);
+            padding:20px;
+        }
+
+        .sidebar h2{
+            margin-bottom:20px;
+        }
+
+        .sidebar ul{
+            list-style:none;
+        }
+
+        .sidebar ul li{
+            margin:15px 0;
+        }
+
+        .sidebar ul li a{
+            color:rgb(0, 0, 0);
+            text-decoration:none;
+        }
+
+        .main{
+            flex:1;
+            display:flex;
+            flex-direction:column;
+        }
+
+        .navbar{
+            background:#2e93f8;
+            color:rgb(0, 0, 0);
+            font-weight: 700;
+            padding:15px;
+        }
+
+        .content{
+            flex:1;
+            background:#ecf0f1;
+            padding:20px;
+        }
+
+        .cards{
+            display:flex;
+            flex-direction: column;
+            gap:20px;
+        }
+
+        .card{
+            flex:1;
+            background:white;
+            padding:20px;
+            border-radius:8px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar">
+        Welcome to my dashboard
+    </div>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="content">
+                <h2>Summary</h2>
+                <br>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Total Users</h3>
+                        <p>120</p>
+                    </div>
+                    <div class="card">
+                        <h3>Sales</h3>
+                        <p>Rs.5000</p>
+                    </div>
+                    <div class="card">
+                        <h3>Orders</h3>
+                        <p>202</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
