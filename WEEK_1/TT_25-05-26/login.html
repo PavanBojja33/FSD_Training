@@ -4,17 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            background: linear-gradient(135deg, #eef2ff, #dbeafe);
+        }
+
+        .box {
+            width: 100%;
+            max-width: 420px;
+            background: #ffffff;
+            padding: 28px 22px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .box h2 {
+            margin-bottom: 18px;
+            color: #0f172a;
+            font-size: 22px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 12px;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            outline: none;
+            font-size: 14px;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+        }
+
+        button {
+            margin-top: 6px;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.05s ease, background 0.15s ease;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        button:active {
+            transform: scale(0.99);
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                padding: 22px 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2>Login Form</h2>
-    <form action="get">
-    </form>
-    <label for="username">
-        <input type="text" name="username">
-    </label>
-    <label for="password">
-        <input type="text" name="password">
-    </label>
-    <button onsubmit="">Login</button>
+    <div class="box">
+        <h2>Login Form</h2>
+
+        <form action="get">
+            <div class="field">
+                <label for="username">Username</label>
+                <input id="username" type="text" name="username" required />
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" required />
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </body>
 </html>
