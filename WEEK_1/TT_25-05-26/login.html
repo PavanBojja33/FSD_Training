@@ -63,12 +63,10 @@
             border: 1px solid #cbd5e1;
             outline: none;
             font-size: 14px;
-            transition: border-color 0.15s ease, box-shadow 0.15s ease;
         }
 
         input:focus {
             border-color: #2563eb;
-            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
         }
 
         button {
@@ -76,26 +74,15 @@
             padding: 12px;
             border: none;
             border-radius: 10px;
-            background: #2563eb;
+            background: #6e96eb;
             color: #fff;
             font-size: 15px;
             font-weight: 700;
             cursor: pointer;
-            transition: transform 0.05s ease, background 0.15s ease;
         }
 
         button:hover {
             background: #1d4ed8;
-        }
-
-        button:active {
-            transform: scale(0.99);
-        }
-
-        @media (max-width: 480px) {
-            .box {
-                padding: 22px 16px;
-            }
         }
     </style>
 </head>
@@ -103,7 +90,7 @@
     <div class="box">
         <h2>Login Form</h2>
 
-        <form action="get">
+        <form action="get" id="loginForm">
             <div class="field">
                 <label for="username">Username</label>
                 <input id="username" type="text" name="username" required />
@@ -117,5 +104,32 @@
             <button type="submit">Login</button>
         </form>
     </div>
+
+    <script>
+        // Very basic validation: block submit if fields are empty.
+        const form = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+
+        form.addEventListener('submit', (e) => {
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value;
+
+            if (!username) {
+                e.preventDefault();
+                alert('Enter username');
+                usernameInput.focus();
+                return;
+            }
+
+            if (!password) {
+                e.preventDefault();
+                alert('Enter password');
+                passwordInput.focus();
+                return;
+            }
+        });
+    </script>
 </body>
 </html>
+
