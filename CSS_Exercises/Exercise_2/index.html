@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .student{
+        width:fit-content;
+        height: auto;
+        display: flex;
+        margin: 20px;
+        background-color: rgb(194, 240, 240);
+        border: 1px solid black;
+    }
+    
+    .details,img{
+        border: 1px solid black;
+        margin: 5px;
+    }
+    .details{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    @media screen AND (min-width : 769px){
+        .student{
+            flex-direction: row;
+        }
+    }
+    @media screen AND (max-width : 768px){
+        .student{
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+</style>
+<body>
+    <div class="student">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4KNg7wcWyaEnR7zNie9C9Iisv6hNRd3n67gdOKhTvSg&s=10" id="student-img" alt="student1">
+        <div class="details">
+            <p>Name : Pavan Bojja</p>
+            <p>Branch : CSE</p>
+            <p>Email : pavanbojja33@gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>
+<!-- cvrcoe.in/a90262 -->

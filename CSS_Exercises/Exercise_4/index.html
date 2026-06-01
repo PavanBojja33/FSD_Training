@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    .header,.sidebar,.main-content,.footer{
+        text-align: center;
+
+    }
+    .container{
+        width: 100vw;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .header{
+        grid-area: header;
+        background-color: rgb(226, 255, 78);
+        padding: 20px;
+        margin: 5px;
+    }
+    .sidebar{
+        grid-area: sidebar;
+        background-color: rgb(104, 197, 197);
+        padding: 20px;
+        margin: 5px;
+    }
+    .main-content{
+        grid-area: main-content;
+        background-color: rgb(203, 160, 217);
+        padding: 20px;
+        margin: 5px;
+    }
+    .footer{
+        grid-area: footer;
+        background-color: rgb(141, 80, 80);
+        padding: 20px;
+        margin: 5px;
+    }
+    @media screen and (min-width: 769px) {
+        .container{
+            grid-template-areas:
+                "header header header header"
+                "sidebar main-content main-content main-content"
+                "footer footer footer footer";
+        }
+    }
+    @media screen and (max-width : 768px) {
+        .container{
+            grid-template-areas: 
+                "header header header header"
+                "main-content main-content main-content main-content"
+                "footer footer footer footer";
+        }
+        .sidebar{
+            display: none;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="main-content">Main Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+<style>
+    .grid img{
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        margin: 10px;
+    }
+
+    .grid{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        @media screen and (min-width : 1025px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 400px 400px;
+        }
+        @media screen and (min-width : 769px) and (max-width : 1024px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(400px,4);
+        }
+        @media screen and (max-width : 768px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(350px,8);
+        }
+    }
+</style>
+<body>
+    <div class="grid">
+        <img src="https://i.pinimg.com/736x/8f/5b/cf/8f5bcf6d4aef67a72387d5c01c1d4831.jpg" alt="image1">
+        <img src="https://i.pinimg.com/736x/2a/84/a8/2a84a8a4001731609b4b01d23acd1f45.jpg" alt="image2">
+        <img src="https://i.pinimg.com/736x/73/8f/dd/738fdd8972bbd52f6c8bdffda75588ef.jpg" alt="image3">
+        <img src="https://i.pinimg.com/736x/3b/ec/1b/3bec1bff58f5e5bd30e1dff7ed68bf11.jpg" alt="image4">
+        <img src="https://i.pinimg.com/736x/fd/f6/aa/fdf6aad1755fc838376e749f62df0618.jpg" alt="image5">
+        <img src="https://i.pinimg.com/736x/26/3f/d2/263fd2be58184bd0bb1ad4b73a2cf1fd.jpg" alt="image6">
+        <img src="https://i.pinimg.com/736x/f3/59/fc/f359fcc36639cacde81d4050eca8574f.jpg" alt="image7">
+        <img src="https://i.pinimg.com/736x/07/88/6e/07886eefbeb74baac1e8828e7d576ab5.jpg" alt="">
+    </div>
+</body>
+</html>
