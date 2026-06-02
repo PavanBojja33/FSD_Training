@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(81, 126, 126);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        animation-name: move;
+        animation-timing-function: linear;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes move {
+        0%,100%{
+            transform: translate(-50%, -50%) translateX(0);
+        }
+        50%{
+            transform: translate(-50%, -50%) translateX(200px);
+        }
+    }
+</style>
+<body>
+    <div class="circle">
+
+    </div>
+</body>
+</html>
